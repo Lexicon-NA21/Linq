@@ -19,11 +19,15 @@ namespace Linq
                 new Person("Sopia", 32),
             };
 
-            var numbersArray = Enumerable.Range(1, 100).ToArray();
-            var numbersList = Enumerable.Range(1, 100).ToList();
+            var numbersArray = Enumerable.Range(1, 10).ToArray();
+            var numbersList = Enumerable.Range(1, 10).ToList();
 
-            string st = "hej";
-            string result = st.Add("banan");
+            string st = "Hej!";
+            string result1 = st.Add("Banan");
+            string result2 = st.Add("Banana", "split", "är", "gott");
+
+            Console.WriteLine(result1);
+            Console.WriteLine(result2);
 
             numbersArray.Print();
             numbersList.Print();
