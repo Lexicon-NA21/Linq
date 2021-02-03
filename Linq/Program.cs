@@ -21,6 +21,13 @@ namespace Linq
 
             var numbersArray = Enumerable.Range(1, 100).ToArray();
             var numbersList = Enumerable.Range(1, 100).ToList();
+
+            string st = "hej";
+            string result = st.Add("banan");
+
+            numbersArray.Print();
+            numbersList.Print();
+            persons.Print();
         }
     }
 }
