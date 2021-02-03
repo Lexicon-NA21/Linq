@@ -13,8 +13,7 @@ namespace Linq
 
         public static string Add(this string str, params string[] words)
         {
-            var temp = String.Join(" ", words);
-            return $"{str} {temp}";
+            return $"{str} {String.Join(" ", words)}";
         }
 
         public static void Print<T>(this IEnumerable<T> collection)

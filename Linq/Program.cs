@@ -16,7 +16,7 @@ namespace Linq
                 new Person("Sara" , 54),
                 new Person("Ida" ,  36),
                 new Person("Fia",   45),
-                new Person("Sopia", 32),
+                new Person("Sopie", 32),
             };
 
             var numbersArray = Enumerable.Range(1, 10).ToArray();
@@ -32,6 +32,25 @@ namespace Linq
             numbersArray.Print();
             numbersList.Print();
             persons.Print();
+
+            var result = persons
+                            .Where(p => p.Name.StartsWith("S")) //&&
+                            .Where(p => p.Name.EndsWith("a"))
+                            .Select(p => p.Age)
+                            .Sum();
+                            
+
+            PersonDTO[] result3 = persons
+                            .Where(p => p.Age > 30)
+                            .Select(p => new PersonDTO
+                            {
+                                Name = p.Name,
+                                NamesLength = p.Name.Length
+                            })
+                            .ToArray();
+
+            var sortedPerson = persons.OrderByDescending(p => p.Name);
+
         }
     }
 }
